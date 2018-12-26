@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".fragment.PictureContentFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="关于Picture"
+        android:textColor="#ff00"
+        android:textSize="@dimen/sp_16" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="图片的加载（首选Glide）\n        Glide.with(context)
+                  .load(ImgUrl)
+                  .asBitmap()
+                  .error(R.drawable.error)
+                  .placeholder(R.drawable.loading)
+                  .dontAnimate()
+                  .diskCacheStrategy(DiskCacheStrategy.ALL)
+                  .into(ImageView);"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ccc"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="关于Bitmap \n  * 为什么要高效的加载Bitmap？\n
+         1、防止内存溢出\n
+         2、尽可能节省内存开销\n
+         3、使我们的应用跑的更加流畅\n
+* 关于缓存：\n
+         1、对一些不是经常发生变化的数据 ，直接使用本地缓存，提升应用相应速度\n
+         2、不再频繁的请求服务器，可以降低服务器的负载压力\n
+         3、一些特殊场景下的使用，例如：离线阅读。\n
+ * 常见使用场景：\n
+        1、对Bitmap和File等大数据进行缓存，无需每次都从下载，尤其是listview\n
+        2、数据更新不需要实时更新，采用缓存机制。\n
+ * 常用缓存策略：\n
+        1、android LruCache实现内存缓存\n
+        2、android  DiskLruCache实现硬盘缓存\n
+        3、SQLite实现缓存（不重要）"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#ccc"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:gravity="left"
+                android:padding="8dp"
+                android:text=" * Bitmap加载方式：\n
+        1、BitmapFactory.decodeByteArray();\n
+        2、BitmapFactory.decodeFile();\n
+        3、BitmapFactory.decodeResource();\n
+        4、BitmapFactory.decodeStream();" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#ccc"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:gravity="left"
+                android:padding="8dp"
+                android:text=" * BitmapFactory.Options重要性：\n
+         1、inJustDecodeBounds;\n
+         2、outWidth/outHeight\n
+         3、inSampleSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ccc"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:gravity="left"
+                android:padding="8dp"
+                android:text="参考:照片墙" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
