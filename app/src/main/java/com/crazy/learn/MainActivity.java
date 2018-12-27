@@ -14,6 +14,7 @@ import com.crazy.learn.fragment.DemoContentFragment;
 import com.crazy.learn.fragment.EventBusContentFragment;
 import com.crazy.learn.fragment.FileContentFragment;
 import com.crazy.learn.fragment.FourComponentsContentFragment;
+import com.crazy.learn.fragment.GlideContentFragment;
 import com.crazy.learn.fragment.LazyContentFragment;
 import com.crazy.learn.fragment.StatusBarContentFragment;
 import com.crazy.learn.fragment.PictureContentFragment;
@@ -47,6 +48,7 @@ public class MainActivity extends BaseActivity {
     private EventBusContentFragment eventBusContentFragment;
     private SynchronousContentFragment synchronousContentFragment;
     private FourComponentsContentFragment fourComponentsContentFragment;
+    private GlideContentFragment glideContentFragment;
     public static int mPosition;
 
     @Override
@@ -81,7 +83,7 @@ public class MainActivity extends BaseActivity {
         mList.add(new StudyType("四大组件"));
         mList.add(new StudyType("MVP架构"));
         mList.add(new StudyType("网络请求框架"));
-        mList.add(new StudyType("......."));
+        mList.add(new StudyType("Glide框架"));
         mList.add(new StudyType("......."));
         adapter = new StudyAdapter();
         adapter.setNewData(mList);
@@ -156,12 +158,17 @@ public class MainActivity extends BaseActivity {
                         fragmentTransaction9.commit();
                         break;
                     case 9:
-                        fourComponentsContentFragment=new FourComponentsContentFragment();
+                        fourComponentsContentFragment = new FourComponentsContentFragment();
                         FragmentTransaction fragmentTransaction10 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction10.replace(R.id.fragment_container, fourComponentsContentFragment);
                         fragmentTransaction10.commit();
                         break;
-
+                    case 10:
+                        glideContentFragment = new GlideContentFragment();
+                        FragmentTransaction fragmentTransaction11 = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction11.replace(R.id.fragment_container, glideContentFragment);
+                        fragmentTransaction11.commit();
+                        break;
 
                 }
             }
