@@ -3,4 +3,9 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="border_grey2">#E6E6E6</color>
+    <!--APP按钮颜色-->
+    <color name="APP_Btn">#FDC804</color>
+    <!--APP背景颜色-->
+    <color name="BackGroundColor">#f0f2f5</color>
 </resources>

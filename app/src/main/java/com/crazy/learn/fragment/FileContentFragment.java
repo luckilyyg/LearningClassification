@@ -15,7 +15,10 @@ import com.crazy.learn.R;
  * A simple {@link Fragment} subclass.
  */
 public class FileContentFragment extends Fragment {
-
+    /**
+     * 缓存文件保存路径
+     */
+    public static final String CACHE_FILE_PATH = "/smile/cache/";
 
     public FileContentFragment() {
         // Required empty public constructor
@@ -30,6 +33,7 @@ public class FileContentFragment extends Fragment {
         showFilePath();
         return view;
     }
+
 
     private void showFilePath() {
         // 应用私有存储（内置存储）---文件会随着App卸载而被删除

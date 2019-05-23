@@ -12,10 +12,10 @@ import com.crazy.learn.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NetRequestContentFragment extends Fragment {
+public class DownLoadContentFragment extends Fragment {
 
 
-    public NetRequestContentFragment() {
+    public DownLoadContentFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class NetRequestContentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_net_request_content, container, false);
+        return inflater.inflate(R.layout.fragment_down_load_content, container, false);
     }
 
 }

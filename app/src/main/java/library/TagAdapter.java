@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.crazy.learn.R;
+import com.crazy.learn.bean.LabelInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,7 @@ public class TagAdapter<T> extends BaseAdapter implements OnInitSelectedPosition
         this.mContext = context;
         mDataList = new ArrayList<>();
     }
+
 
     @Override
     public int getCount() {
@@ -66,9 +68,11 @@ public class TagAdapter<T> extends BaseAdapter implements OnInitSelectedPosition
 
     @Override
     public boolean isSelectedPosition(int position) {
-        if (position % 2 == 0) {
-            return true;
-        }
+
+//        if (position % 2 == 0) {
+//            return true;
+//        }
+//        return false;
         return false;
     }
 }

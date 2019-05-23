@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".HomeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,38 +18,33 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="学习分类"
+            android:text="知识归类"
             android:textColor="#ffffff"
             android:textSize="20sp" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/typerecyclerview"
-            android:layout_width="0dp"
+        <ScrollView
+            android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#f4f4f4"
             android:scrollbars="none">
 
-        </android.support.v7.widget.RecyclerView>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="#cdcdcd" />
+            <RadioGroup
+                android:id="@+id/rg_classify"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"></RadioGroup>
+
+        </ScrollView>
 
         <FrameLayout
-            android:id="@+id/fragment_container"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3" />
-
+            android:id="@+id/fl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
     </LinearLayout>
-
-
 </LinearLayout>

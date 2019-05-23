@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.crazy.learn.cart.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/s"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="25dp"
+    android:paddingBottom="15dp">
+    <!-- Bottom View Start-->
+    <LinearLayout
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <!-- 删除 -->
+        <LinearLayout
+            android:id="@+id/swipe_bottom_del_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#FF5D5D"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="删除"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_child"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:background="@drawable/checkbox_payment"
+            android:button="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/item_chlid_image"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingBottom="18dp">
+
+                <TextView
+                    android:id="@+id/item_chlid_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="¥ 88.00"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="3dp"
+                    android:paddingBottom="2dp">
+
+                    <Button
+                        android:id="@+id/item_chlid_close"
+                        android:layout_width="26dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="-" />
+
+                    <View
+                        android:layout_width="0.5sp"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/item_chlid_num"
+                        android:layout_width="28dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textSize="11sp" />
+
+                    <View
+                        android:layout_width="0.5sp"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/item_chlid_add"
+                        android:layout_width="26dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="2dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="+" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</com.crazy.learn.cart.SwipeLayout>

@@ -6,6 +6,8 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.widget.ImageView;
 
+import com.noober.background.BackgroundLibrary;
+
 
 /**
  * 作者：Administrator
@@ -23,11 +25,13 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        mContext=getApplicationContext();
+        mContext = getApplicationContext();
+        BackgroundLibrary.inject(mContext);
+
     }
 
     //返回
-    public static Context getContextObject(){
+    public static Context getContextObject() {
         return mContext;
     }
 
